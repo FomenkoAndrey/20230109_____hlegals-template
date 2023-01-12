@@ -15,3 +15,6 @@ $color-gray-separator: #e6e6f0;
 
 $color-white: #ffffff;
 $color-black: #000000;
+
+$linear-gradient1: linear-gradient(42deg, $color-primary 15%, $color-primary 50%, #7a425e 88%);
+$linear-gradient2: linear-gradient(to top, $color-primary 0%, transparent 100%);

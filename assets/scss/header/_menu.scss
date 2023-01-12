@@ -1,0 +1,32 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.menu {
+  &__btn {
+    @include md-min {
+      display: none;
+    }
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    background-color: red;
+    // todo: нарисовать кнопку меню!
+    // делаем после секции слайдера (следующая)
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    gap: $gap-md;
+    @include unlist;
+    @include md {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.25em 0;
+    color: $color-white;
+  }
+}
