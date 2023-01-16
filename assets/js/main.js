@@ -1,12 +1,19 @@
+$('.menu__btn').on('click', function () {
+  $(this).toggleClass('-active');
+  $('.menu__list').stop(true, true).slideToggle(300);
+});
+
+
 // считали DOM элементы
 const headersList = document.querySelectorAll('.slider__header')
 const notesList = document.querySelectorAll('.slider__note')
+const titlesList = document.querySelectorAll('.slider__title')
 const descriptionsList = document.querySelectorAll('.slider__description')
 const indicatorsList = document.querySelectorAll('.slider__indicator')
 
 let index = 0;
 let interval = 2000;
-let heightsArr = [];
+let heightsArr = null;
 let heightMax = null;
 
 setInterval(() => {
@@ -23,6 +30,13 @@ setInterval(() => {
 }, interval)
 
 // вычисление и изменение высоты блока описания под максимальный текст
+heightsArr = []
 descriptionsList.forEach(el => heightsArr.push(el.clientHeight))
 heightMax = Math.max(...heightsArr)
 descriptionsList.forEach(el => el.style.height = `${heightMax}px`)
+
+// вычисление и изменение высоты блока тайтлов под максимальный текст
+heightsArr = []
+titlesList.forEach(el => heightsArr.push(el.clientHeight))
+heightMax = Math.max(...heightsArr)
+titlesList.forEach(el => el.style.height = `${heightMax}px`)

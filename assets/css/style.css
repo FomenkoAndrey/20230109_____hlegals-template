@@ -338,11 +338,71 @@ a {
 }
 
 .menu__btn {
-  width: 32px;
-  height: 32px;
+  position: relative;
+
+  width: 30px;
+  height: 22.5px;
   margin-left: auto;
 
-  background-color: red;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+       -o-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.menu__btn-row {
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  -webkit-transition: 0.25s ease-in-out;
+       -o-transition: 0.25s ease-in-out;
+          transition: 0.25s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  opacity: 1;
+  border-radius: 3px;
+  background: #ffffff;
+}
+.menu__btn-row:nth-child(1) {
+  top: 0;
+}
+.menu__btn-row:nth-child(2),
+.menu__btn-row:nth-child(3) {
+  top: 9px;
+}
+.menu__btn-row:nth-child(4) {
+  top: 18px;
+}
+.menu__btn.-active span:nth-child(1) {
+  top: 9px;
+  left: 50%;
+
+  width: 0;
+}
+.menu__btn.-active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.menu__btn.-active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.menu__btn.-active span:nth-child(4) {
+  top: 9px;
+  left: 50%;
+
+  width: 0;
 }
 .menu__list {
   display: -webkit-box;
@@ -358,6 +418,10 @@ a {
   list-style: none;
 
   gap: 15px;
+}
+.menu__item {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .menu__link {
   display: block;
@@ -410,6 +474,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 .slider__headers {
   position: relative;
@@ -433,6 +498,11 @@ a {
 }
 .slider__header {
   position: relative;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   color: #b3b3ba;
 
@@ -589,7 +659,20 @@ a {
     display: none;
   }
   .menu__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 50%;
+
     display: none;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: rgba(50, 50, 100, 0.9);
+    -webkit-box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: -1px 5px 10px rgba(0, 0, 0, 0.25);
   }
   .actions__locations {
     display: none;
