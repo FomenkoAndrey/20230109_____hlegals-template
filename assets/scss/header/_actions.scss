@@ -4,8 +4,8 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: $gap;
 
+  gap: $gap;
   @include sm-min {
     justify-content: flex-end;
     a {
@@ -23,23 +23,26 @@
   &__languages {
     display: flex;
 
-    font-weight: 700;
-    font-size: 12px;
     letter-spacing: 1px;
+
+    font-size: 12px;
+    font-weight: 700;
 
     &-link {
       padding: 5px 6px;
+
       border-radius: 8px;
 
       &.-active {
-        background-color: $color-accent;
         color: $color-white;
+        background-color: $color-accent;
       }
     }
   }
 
   &__locations {
     font-style: normal;
+
     @include md {
       display: none;
     }

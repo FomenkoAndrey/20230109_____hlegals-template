@@ -3,6 +3,8 @@ $color-primary-alt: #46466e;
 $color-primary-soft: #686887;
 
 $color-accent: #f0145a;
+$color-accent-light: #ef8080;
+$color-accent-dark: #7a425e;
 
 $color-active: #24a3ff;
 $color-active-hover: #0085ff;
@@ -10,11 +12,13 @@ $color-active-active: #006ccf;
 
 $color-gray-bg: #f5f5fa;
 $color-gray-bg-alt: #ededf7;
-$color-gray-text: #b2b2b9;
+$color-gray-text: #b3b3ba;
 $color-gray-separator: #e6e6f0;
 
 $color-white: #ffffff;
 $color-black: #000000;
 
-$linear-gradient1: linear-gradient(42deg, $color-primary 15%, $color-primary 50%, #7a425e 88%);
+$linear-gradient1: linear-gradient(42deg, $color-primary 15%, $color-primary 50%, $color-accent-dark 88%);
 $linear-gradient2: linear-gradient(to top, $color-primary 0%, transparent 100%);
+
+$text-gradient: linear-gradient(90deg, $color-accent-light 1%, $color-accent 100%);

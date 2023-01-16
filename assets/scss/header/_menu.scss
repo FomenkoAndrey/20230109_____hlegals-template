@@ -3,13 +3,15 @@
 
 .menu {
   &__btn {
-    @include md-min {
-      display: none;
-    }
     width: 32px;
     height: 32px;
     margin-left: auto;
+
     background-color: red;
+
+    @include md-min {
+      display: none;
+    }
     // todo: нарисовать кнопку меню!
     // делаем после секции слайдера (следующая)
   }
@@ -17,6 +19,7 @@
   &__list {
     display: flex;
     justify-content: flex-end;
+
     gap: $gap-md;
     @include unlist;
     @include md {
@@ -26,7 +29,9 @@
 
   &__link {
     display: block;
+
     padding: 0.25em 0;
+
     color: $color-white;
   }
 }

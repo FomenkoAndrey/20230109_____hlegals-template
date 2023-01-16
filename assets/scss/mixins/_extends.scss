@@ -2,5 +2,15 @@
 
 %container {
   width: min(100% - $gap-xl, $container-width);
+
   margin-inline: auto;
+}
+
+%text-liner-gradient {
+  background: $text-gradient;
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
 }
