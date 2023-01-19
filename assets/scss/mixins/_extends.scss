@@ -14,3 +14,12 @@
   -webkit-text-fill-color: transparent;
           text-fill-color: transparent;
 }
+
+%text-liner-gradient-invert {
+  background: $text-gradient-invert;
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
